@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roleta Russa</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #333;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin-top: 20px;
+            cursor: pointer;
+            background-color: #ff5555;
+            border: none;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <h1>Contagem: <span id="contador">10</span></h1>
+        <button onclick="girar()">Gire</button>
+        <p id="mensagem"></p>
+    </div>
+
+    <script>
+        let contador = 10;
+
+        function girar() {
+            if (contador > 1) {
+                contador--;
+                document.getElementById("contador").textContent = contador;
+            } else {
+                document.getElementById("mensagem").textContent = "Apagando System32... Brincadeira! Seu sistema está seguro.";
+            }
+        }
+    </script>
+
+</body>
+</html>
